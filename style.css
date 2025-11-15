@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: azure;
+    color: black;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+header{
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav h1{
+    padding: 0.4rem;
+}
+
+header nav p{
+    padding-left: 0.2rem;
+    padding-bottom: 0.3rem;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+nav {
+    background-color: slateblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+nav button{
+    border: 2px solid white;
+    background-color:darkslateblue;
+    color: azure;
+    padding: 0.2rem;
+    margin: 3px;
+}
+
+nav button:hover{
+    border: 2px solid plum; 
+    background-color: darkorchid;
+    cursor: pointer;
+}
+
+body main .presentacion{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+body main img{
+    border-radius: 50%;
+    width: 40%;
+    margin: 1.5rem;
+    border: 5px solid blueviolet;
+    
+}
+
+body main .botones button{
+    padding: 8px;
+    background-color: rgb(234, 208, 255);
+    font-size: 15px;
+}
+
+body main .botones button a{
+    text-decoration: none;
+    color: black;  
+}
+
+body main .botones button:hover{
+    cursor: pointer;
+    border: 2px solid blueviolet;
+    background-color: white;
+}
+
+
+body main .datos-personales .nombre, 
+.materia, 
+.legajo, 
+.universidad{
+    border: 2px solid blueviolet;
+    padding: 0.8rem;
+    margin: 1rem;
+}
+
+body main .datos-personales .nombre h4, p{
+    padding: 8px;
+}
+
+body main .datos-personales .legajo h4, p{
+    padding: 8px;
+}
+
+body main .datos-personales .materia h4, p{
+    padding: 8px;
+}
+
+body main .datos-personales .universidad h4, p{
+    padding: 8px;
+}
+
+/*MODO OSCURO*/
+
+body.modo-oscuro{
+    background-color: black;
+    color: white;
+}
+
+body.modo-oscuro header{
+    background-color: rgb(49, 15, 80);
+    color: white;
+}
+
+/*FOOTER*/
+
+footer{
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+footer button{
+    border: 2px solid white;
+    background-color:darkslateblue;
+    padding: 0.4rem;
+    margin: 4px;
+}
+
+footer button a{
+    text-decoration: none;
+    color: azure;
+}
+
+footer button:hover{
+    border: 2px solid plum; 
+    background-color: darkorchid;
+    cursor: pointer;
+}
+
+
+

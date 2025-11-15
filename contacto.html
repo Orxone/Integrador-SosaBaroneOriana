@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Personal</title>
+    <link rel="stylesheet" href="styleC.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <h1>Ficha Personal</h1>
+            <p>Perfil de Estudiante</p>
+            <button id="oscuro-btn">Oscuro</button>
+            <button id="claro-btn">Claro</button>
+        </nav>
+    </header>
+
+    <main>
+        <img src="img/FotodePerfil.jpg" alt="FotodePerfil">
+        <h2>Oriana Candela Sosa Barone</h2>
+        
+        <div class="botones">
+            <button id="home-btn"><a href="index.html">HOME</a></button>
+            <button id="local-btn"><a src="https://orxone.github.io/MiLocal-SosaBarone-2025" target="_blank"></a>Local Com</button>
+            <button id="fanpage-btn"><a src="https://orxone.github.io/FanPage-SosaBarone-2025/" target="_blank"></a>Fan Page</button>
+            <button id="contacto-btn"><a href="contacto.html">Contacto</a></button>
+        </div>
+
+        <div class="datos-personales">
+            <div class="nombre">
+                <h4>Nombre Completo</h4>
+                <p>Oriana Candela Sosa Barone</p>
+            </div>
+            <div class="legajo">
+                <h4>Nro de Legajo</h4>
+                <p>1170143</p>
+            </div>
+            <div class="materia">
+                <h4>Materia</h4>
+                <p>Diseño y desarrollo Web</p>
+            </div>
+            <div class="universidad">
+                <h4>Universidad</h4>
+                <p>UADE</p>
+            </div>
+        </div>
+
+        <div class="contacto-box">
+            <form action="#">
+                <h2>Contacto</h2>
+
+                <div class="input-box">
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" required><br>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">Email</label><br>
+                    <input type="email" required><br><br>
+                </div>
+
+                <div class="espacio-mensaje">
+                    <label for="message">Mensaje</label><br>
+                    <textarea name="mensaje" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>2025 Todos los derechos reservados</p>
+        <button id="github-btn"><a href="#">Ver en Github</a></button>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
