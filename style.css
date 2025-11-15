@@ -19,8 +19,10 @@ img{
 header{
     background-color: blueviolet;
     color: white;
-    display: flex;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav h1{
@@ -56,35 +58,40 @@ nav button:hover{
 }
 
 body main .presentacion{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
 }
 
 body main img{
     border-radius: 50%;
-    width: 40%;
+    width: 25%;
     margin: 1.5rem;
     border: 5px solid blueviolet;
     
 }
 
-body main .botones button{
+body main .links a{
     padding: 8px;
     background-color: rgb(234, 208, 255);
     font-size: 15px;
-}
-
-body main .botones button a{
     text-decoration: none;
     color: black;  
 }
 
-body main .botones button:hover{
+body main .links a:hover{
     cursor: pointer;
     border: 2px solid blueviolet;
     background-color: white;
 }
 
+body main .datos-personales{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
 body main .datos-personales .nombre, 
 .materia, 
@@ -119,6 +126,10 @@ body.modo-oscuro{
 }
 
 body.modo-oscuro header{
+    background-color: rgb(49, 15, 80);
+}
+
+body.modo-oscuro header nav {
     background-color: rgb(49, 15, 80);
     color: white;
 }
