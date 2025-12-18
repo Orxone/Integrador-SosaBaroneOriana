@@ -7,8 +7,8 @@
 }
 
 body{
-    background-color: azure;
-    color: black;
+    background-color: var(--bg-body);
+    color: var(--texto);
 }
 
 img{
@@ -16,151 +16,173 @@ img{
     height: auto;
 }
 
-header{
-    background-color: blueviolet;
-    color: white;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/*MODO OSCURO*/
+:root{
+    --bg-body:azure;
+    --bg-header: slateblue;
+    --bg-navbtn: darkslateblue;
+    --bg-btn: blueviolet;
+    --texto: black;
+    --texto-nav: azure;
+    --texto-btn: azure;
+    --borde-nav-btn: white;
+    --borde-btn: plum;
+    --borde: blueviolet; 
+    --header-hover: darkorchid;
 }
 
-header nav h1{
+.modo-oscuro{
+    --bg-body:black;
+    --bg-header:rgb(49, 15, 80);
+    --bg-navbtn: darkslateblue;
+    --bg-btn: blueviolet;
+    --texto:white;
+    --texto-nav: azure;
+    --borde-nav-btn: white;
+    --borde-btn: plum;
+    --borde: blueviolet; 
+    --header-hover: darkorchid;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+
+header{
+    color: white;
+    justify-content: space-between;
+}
+
+.navbar {
+    flex-wrap: wrap;
+    display: flex;
+    background-color: var(--bg-header);
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+}
+
+nav .navbar h1{
     padding: 0.4rem;
 }
 
-header nav p{
+nav .navbar p{
     padding-left: 0.2rem;
     padding-bottom: 0.3rem;
 }
 
-/*BARRA DE NAVEGACIÓN*/
-nav {
-    background-color: slateblue;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-nav button{
-    border: 2px solid white;
-    background-color:darkslateblue;
-    color: azure;
+.navbar button{
+    border: 2px solid var(--texto);
+    background-color:var(--bg-navbtn);
+    color: var(--texto-nav);
     padding: 0.2rem;
     margin: 3px;
 }
 
-nav button:hover{
-    border: 2px solid plum; 
-    background-color: darkorchid;
+.navbar button:hover{
+    border: 2px solid var(--borde); 
+    background-color: var(--header-hover);
     cursor: pointer;
 }
+
+/*CONTENIDO*/
 
 body main .presentacion{
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
+}
 
+body main .presentacion .portfolio h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 body main img{
     border-radius: 50%;
-    width: 25%;
+    width: 18%;
     margin: 1.5rem;
-    border: 5px solid blueviolet;
-    
+    border: 5px solid var(--borde);
 }
 
 body main .links a{
-    padding: 8px;
-    background-color: rgb(234, 208, 255);
-    font-size: 15px;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: var(--bg-btn);
+    font-size: 1rem;
     text-decoration: none;
-    color: black;  
+    color: var(--texto-btn); 
+    border: transparent; 
+    border-radius: 0.5rem;
 }
 
 body main .links a:hover{
     cursor: pointer;
-    border: 2px solid blueviolet;
-    background-color: white;
+    border: 2px solid var(--borde-btn);
+    background-color: var(--bg-header);
 }
 
 body main .datos-personales{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 1.5rem;
 }
 
 body main .datos-personales .nombre, 
 .materia, 
 .legajo, 
 .universidad{
-    border: 2px solid blueviolet;
+    border: 2px solid var(--borde);
+    border-radius: 0.5rem;
     padding: 0.8rem;
     margin: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 body main .datos-personales .nombre h4, p{
-    padding: 8px;
+    padding: 0.5rem;
 }
 
 body main .datos-personales .legajo h4, p{
-    padding: 8px;
+    padding: 0.5rem;
 }
 
 body main .datos-personales .materia h4, p{
-    padding: 8px;
+    padding: 0.5rem;
 }
 
 body main .datos-personales .universidad h4, p{
-    padding: 8px;
-}
-
-/*MODO OSCURO*/
-
-body.modo-oscuro{
-    background-color: black;
-    color: white;
-}
-
-body.modo-oscuro header{
-    background-color: rgb(49, 15, 80);
-}
-
-body.modo-oscuro header nav {
-    background-color: rgb(49, 15, 80);
-    color: white;
+    padding: 0.5rem;
 }
 
 /*FOOTER*/
 
 footer{
-    font-size: 12px;
+    margin: 1rem;
+    font-size: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-
 footer button{
-    border: 2px solid white;
-    background-color:darkslateblue;
+    border: 2px solid var(--texto);
+    border-radius: 0.5rem;
+    background-color:var(--bg-btn);
     padding: 0.4rem;
     margin: 4px;
 }
 
 footer button a{
     text-decoration: none;
-    color: azure;
+    color: var(--texto-btn);
 }
 
 footer button:hover{
-    border: 2px solid plum; 
-    background-color: darkorchid;
+    border: 2px solid var(--borde); 
+    background-color: var(--header-hover);
     cursor: pointer;
 }
-
-
-
